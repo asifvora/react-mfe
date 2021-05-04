@@ -1,4 +1,4 @@
-import OrderApp from './src/App';
+import { Routes as OrderApp } from './src/Routes';
 
 export {
     OrderApp

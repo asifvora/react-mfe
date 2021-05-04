@@ -1,5 +1,5 @@
 {
-  "name": "order",
+  "name": "@app/order",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,13 +12,14 @@
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "4.0.1",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build1": "react-scripts build",
+    "build": "node build.ts",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1,11 +1,16 @@
+import { Router } from 'react-router-dom';
+import { Routes } from './Routes';
+import { createBrowserHistory } from 'history';
 import './App.css';
 
+const history = createBrowserHistory();
+
 function App() {
-  return (
-    <div className="App">
-      <h1>Order app component</h1>
-    </div>
-  );
+	return (
+		<Router history={history}>
+			<Routes />
+		</Router>
+	);
 }
 
 export default App;
