@@ -7,6 +7,7 @@ function Header() {
 			<Link to="home">Home</Link>
 			<Link to="about">About</Link>
 			<Link to="contact">Contact</Link>
+			<Link to="order">Order App</Link>
 			<img src={logo} className="App-logo" alt="logo" />
 		</header>
 	);
