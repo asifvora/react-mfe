@@ -1,14 +1,14 @@
 # React-mfe
 A micro frontend implementation for react js
 
-### lerna build
+### yarn build
  - Build all the packages
 
-### lerna link
+### yarn link
  - Create symlink that is if some package has dependecy on other package
 
-### lerna clean 
+### yarn clean 
 - Run clean for all packages
 
-### lerna bootstrap
+### yarn bootstrap
  - Run yarn in all packages and will link as well
