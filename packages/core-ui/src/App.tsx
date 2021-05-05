@@ -3,7 +3,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Header from './components/Header';
-import { OrderApp } from '@app/order';
+import { OrderApp } from 'order';
 
 import { createBrowserHistory } from 'history';
 import './App.css';
