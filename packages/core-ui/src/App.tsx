@@ -1,16 +1,15 @@
+import { Suspense, lazy } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import About from './pages/About';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Header from './components/Header';
-import { OrderApp } from 'order';
-
 import { createBrowserHistory } from 'history';
 import './App.css';
 
-const history = createBrowserHistory();
+const OrderApp = lazy(() => import('order/dist/exports'));
 
-console.log(OrderApp)
+const history = createBrowserHistory();
 
 function App() {
 	return (
@@ -18,12 +17,14 @@ function App() {
 			<div className="App">
 				<Header />
 			</div>
-			<Switch>
-				<Route exact path="/home" component={Home} />
-				<Route exact path="/about" component={About} />
-				<Route exact path="/contact" component={Contact} />
-				<Route exact path="/order" component={OrderApp} />
-			</Switch>
+			<Suspense fallback={<span>Loading...</span>}>
+				<Switch>
+					<Route exact path="/home" component={Home} />r
+					<Route exact path="/about" component={About} />
+					<Route exact path="/contact" component={Contact} />
+					<Route exact path="/order" component={OrderApp} />
+				</Switch>
+			</Suspense>
 		</Router>
 	);
 }
