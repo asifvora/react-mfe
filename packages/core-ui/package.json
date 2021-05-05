@@ -46,7 +46,6 @@
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
-    "@types/babel__preset-env": "^7.9.1",
     "@types/testing-library__jest-dom": "^5.9.5",
     "react-refresh": "^0.10.0",
     "react-refresh-typescript": "^2.0.0"

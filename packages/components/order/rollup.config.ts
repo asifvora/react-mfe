@@ -47,14 +47,17 @@ const config = [
 			exports: 'named',
 		},
 	},
-	// {
-	// 	input: './src/scss/index.scss',
-	// 	plugins: [
-	// 		bundleScss({			
-	// 			output: 'bundle.scss',
-	// 		}),
-	// 	],
-	// },
+	{
+		input: './src/scss/index.scss',
+		plugins: [
+			bundleScss({
+				output: 'bundle.scss',
+			}),
+		],
+		output: {
+			file: 'dist/dummy.js',
+		},
+	},
 ];
 
 export default config;
