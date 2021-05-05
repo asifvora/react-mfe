@@ -8,7 +8,7 @@ const history = createBrowserHistory();
 function App() {
 	return (
 		<Router history={history}>
-			<span className="title">Hello</span>
+			<span className="title">Hello 007</span>
 			<Routes />
 		</Router>
 	);
