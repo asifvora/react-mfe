@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { toast } from '@mfe/shared/dist/bundle';
+import { Provider } from 'react-redux'
+import configureStore from './store'
 
 import './scss/index.scss';
+
+const store = configureStore();
 
 toast.configure({ hideProgressBar: true, autoClose: 3000 });
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

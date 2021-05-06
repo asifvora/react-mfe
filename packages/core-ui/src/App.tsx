@@ -3,6 +3,7 @@ import { Router } from 'react-router-dom';
 import { history } from './config/routes';
 import { Routes } from './Routes';
 import Header from './components/Header';
+import Counter from './components/Counter';
 
 export const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ export const App: React.FC = () => {
       <div className="App">
         <Header />
       </div>
+      <Counter />
       <Suspense fallback={<span>Loading...</span>}>
         <Routes />
       </Suspense>

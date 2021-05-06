@@ -8,14 +8,21 @@
   "devDependencies": {
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
+    "@types/react-redux": "^7.1.16",
     "@types/react-router-dom": "^5.1.7",
+    "@types/redux-logger": "^3.0.8",
     "axios": "^0.21.1",
     "lerna": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "react-toastify": "^7.0.4"
+    "react-toastify": "^7.0.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "postinstall": "typesync",

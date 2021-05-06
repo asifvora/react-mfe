@@ -9,6 +9,7 @@ function Header() {
 			<Link to={routes.contact.path_string()}>Contact</Link>
 			<Link to={`${routes.featureOneApp.path_string()}/order`}>Feature-one app order page</Link>
 			<Link to={`${routes.featureOneApp.path_string()}/wish-list`}>Feature-one app wish-list page</Link>
+			<Link to={`${routes.featureOneApp.path_string()}/alerts`}>Feature-one app alerts page</Link>
 		</header>
 	);
 }

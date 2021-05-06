@@ -1,7 +1,7 @@
-const sum = (arg1:any , arg2:any) => {
-    return arg1 + arg2;
-}
+import alerts from './reducers/alerts';
 
-export {
-    sum
-}
+const reducerMap = {
+  alerts,
+};
+
+export { reducerMap };
