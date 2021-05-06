@@ -1,7 +1,8 @@
 {
   "packages": [
-    "packages/*",
-    "packages/components/*"
+    "packages/core-ui",
+    "packages/frontend-components/*",
+    "packages/shared-components"
   ],
   "version": "0.0.0",
   "npmClient": "yarn",

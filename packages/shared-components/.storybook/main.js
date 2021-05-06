@@ -5,4 +5,13 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
   ],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+    }
+  }
 };

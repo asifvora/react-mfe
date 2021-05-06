@@ -2,6 +2,16 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
 
+type ITypes = {
+  title: string;
+};
+
+const welcome: ITypes = {
+  title: 'Button',
+};
+
+export default welcome;
+
 export const text = () => (
   <Button onClick={action('clicked')}>Hello Button</Button>
 );

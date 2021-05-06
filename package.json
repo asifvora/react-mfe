@@ -1,8 +1,9 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*",
-    "packages/components/*"
+    "packages/core-ui",
+    "packages/frontend-components/*",
+    "packages/shared-components"
   ],
   "devDependencies": {
     "@types/react": "^17.0.5",

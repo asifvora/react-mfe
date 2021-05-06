@@ -7,8 +7,7 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@mfe/feature-01": "link: ../components/feature-01",
@@ -25,6 +24,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
+    "react-scripts": "4.0.1",
     "typescript": "^4.0.3",
     "typesync": "^0.8.0",
     "web-vitals": "^1.1.1"
