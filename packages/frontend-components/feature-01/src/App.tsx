@@ -1,5 +1,5 @@
 import { Router } from 'react-router-dom';
-import { Routes } from './Routes';
+import { Routes } from './Routes/Routes';
 import { createBrowserHistory } from 'history';
 import './scss/index.scss';
 

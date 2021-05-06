@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { toast } from '@mfe/shared/dist/bundle';
+
+import './scss/index.scss';
+
+toast.configure({ hideProgressBar: true, autoClose: 3000 });
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
-import logo from '../logo.svg';
+import { routes } from '../config/routes_config';
 
 function Header() {
 	return (
 		<header className="App-header">
-			<Link to="home">Home</Link>
-			<Link to="about">About</Link>
-			<Link to="contact">Contact</Link>
-			<Link to="order">Order App</Link>
-			<img src={logo} className="App-logo" alt="logo" />
+			<Link to={routes.index.path_string()}>Home</Link>
+			<Link to={routes.about.path_string()}>About</Link>
+			<Link to={routes.contact.path_string()}>Contact</Link>
+			<Link to={routes.featureOneApp.path_string()}>Feature-01</Link>
 		</header>
 	);
 }
