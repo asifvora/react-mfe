@@ -15,7 +15,14 @@ const commonPlugins = [
 		presets: [['@babel/preset-env', { modules: false }]],
 		plugins: ['@babel/plugin-proposal-class-properties'],
 	}),
-	commonjs(),
+	commonjs({
+		ignoreGlobal: true,
+		include: /\/node_modules\//,
+		namedExports: {
+		  react: Object.keys(require('react')),
+		  'react-is': Object.keys(require('react-is')),
+		},
+	}),
 	externals(),
 	resolve({
 		browser: true,
