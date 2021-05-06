@@ -1,14 +1,13 @@
 # React-mfe
 A micro frontend implementation for react js
 
-### yarn build
- - Build all the packages
+# Why?
+### To scale with multiple teams in a micro services environment
 
-### yarn link
- - Create symlink that is if some package has dependecy on other package
+- More cohesive codebase
+- Simplify maintenance
+- Allows to scale development teams
+- Simplify updates
+- Independent deploy
 
-### yarn clean 
-- Run clean for all packages
-
-### yarn bootstrap
- - Run yarn in all packages and will link as well
+# Read more about <a href="https://martinfowler.com/articles/micro-frontends.html">Micro rontends</a>
