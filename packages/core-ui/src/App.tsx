@@ -7,7 +7,7 @@ import Header from './components/Header';
 import { createBrowserHistory } from 'history';
 import './App.css';
 
-const OrderApp = lazy(() => import('order/dist/exports'));
+const OrderApp = lazy(() => import('@mfe/feature-01/dist/exports'));
 
 const history = createBrowserHistory();
 

@@ -10,7 +10,8 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@mfe/feature-01": "link: ../components/feature-01",
+    "@mfe/feature-01": "link: ../frontend-components/feature-01",
+    "@mfe/shared": "link:../../shared-components/",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
