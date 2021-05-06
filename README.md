@@ -11,3 +11,29 @@ A micro frontend implementation for react js
 - Independent deploy
 
 # Read more about <a href="https://martinfowler.com/articles/micro-frontends.html">Micro rontends</a>
+
+
+# App architecture
+
+- packages
+    - core-ui
+    - frontend-components    
+        - feature-01
+        - feature-02
+        - feature-03
+        - feature-04
+        - feature-05
+        - ...
+    - shared-components
+
+# Used tools technology and libraries
+- Lerna
+- React
+- Redux
+- TypeScript
+- Rollup
+- StyledComponent
+- SCSS
+- Storybook
+- Router Config
+- Some services and utils
