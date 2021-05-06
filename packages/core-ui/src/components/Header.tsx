@@ -7,7 +7,8 @@ function Header() {
 			<Link to={routes.index.path_string()}>Home</Link>
 			<Link to={routes.about.path_string()}>About</Link>
 			<Link to={routes.contact.path_string()}>Contact</Link>
-			<Link to={routes.featureOneApp.path_string()}>Feature-01</Link>
+			<Link to={`${routes.featureOneApp.path_string()}/order`}>Feature-01 App order page</Link>
+			<Link to={`${routes.featureOneApp.path_string()}/wish-list`}>Feature-01 App wish-list page</Link>
 		</header>
 	);
 }
