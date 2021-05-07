@@ -10,7 +10,7 @@ A micro frontend implementation for react js
 - Simplify updates
 - Independent deploy
 
-# Read more about <a href="https://martinfowler.com/articles/micro-frontends.html">Micro rontends</a>
+# Read more about <a href="https://microfrontends.com/ ">Micro frontends</a>
 
 
 # App architecture
