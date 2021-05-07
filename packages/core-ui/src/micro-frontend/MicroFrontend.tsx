@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 interface IMicroFrontendProps {
@@ -9,6 +9,7 @@ interface IMicroFrontendProps {
 
 const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
   const { name, host, history } = props;
+  const [hasError, setError] = useState(null)
   const scriptId = `micro-frontend-script-${name}`;
   
   const renderMicroFrontend = useCallback(() => {
@@ -51,6 +52,8 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
           Promise.allSettled(promises).then(() => {
             renderMicroFrontend();
           });
+        }).catch(error => {
+          setError(error);
         });
     }
 
@@ -62,6 +65,7 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
 
   return (
     <>
+      {hasError && <p> Failed to load {name}</p>}
       <ErrorBoundary appName={name}>
         <React.Suspense fallback="Loading...">
           <main id={`${name}-container`} />
