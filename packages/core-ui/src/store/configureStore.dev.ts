@@ -16,7 +16,6 @@ const configureStore = () => {
     store['asyncReducers'] = {
       ...reducers,
     };
-	console.log(store['asyncReducers']);
 	
     store.replaceReducer(createReducer(store['asyncReducers']));
 
