@@ -11,7 +11,7 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
   const { name, host, history } = props;
   const [hasError, setError] = useState(null)
   const scriptId = `micro-frontend-script-${name}`;
-  
+
   const renderMicroFrontend = useCallback(() => {
     (window as any)[`render${name}`] &&
       (window as any)[`render${name}`](`${name}-container`, history);
