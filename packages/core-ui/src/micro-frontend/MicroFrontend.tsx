@@ -12,9 +12,13 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
   const [hasError, setError] = useState(null)
   const scriptId = `micro-frontend-script-${name}`;
 
+  const registerStore = (reducers) => {
+    console.log('registerStore called', reducers)
+  }
+
   const renderMicroFrontend = useCallback(() => {
     (window as any)[`render${name}`] &&
-      (window as any)[`render${name}`](`${name}-container`, history);
+      (window as any)[`render${name}`](`${name}-container`, history, registerStore);
   }, [name, history]);
 
   useEffect(() => {
