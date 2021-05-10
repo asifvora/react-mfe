@@ -4,11 +4,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { toast } from '@mfe/shared/dist/bundle';
 import { Provider } from 'react-redux'
-import configureStore from './store'
+import store from './store'
 
 import './scss/index.scss';
-
-const store = configureStore();
 
 toast.configure({ hideProgressBar: true, autoClose: 3000 });
 

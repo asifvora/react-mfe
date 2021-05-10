@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
+import store from '../store';
 
 interface IMicroFrontendProps {
   history: any;
@@ -13,7 +14,7 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
   const scriptId = `micro-frontend-script-${name}`;
 
   const registerStore = (reducers) => {
-    console.log('registerStore called', reducers)
+    store['injectReducer'](reducers);
   }
 
   const renderMicroFrontend = useCallback(() => {
