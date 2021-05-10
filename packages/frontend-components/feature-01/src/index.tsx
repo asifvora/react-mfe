@@ -40,7 +40,8 @@ window.renderFeatureOne = (containerId, history, registerStore) => {
 
 // unmount micro frontend
 window.unmountFeatureOne = (containerId) => {
-  ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+  const element = document.getElementById(containerId)
+  element && ReactDOM.unmountComponentAtNode(element);
 };
 
 // Mount to root if it is not a micro frontend

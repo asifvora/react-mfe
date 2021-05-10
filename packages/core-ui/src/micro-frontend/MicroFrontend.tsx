@@ -10,16 +10,20 @@ interface IMicroFrontendProps {
 
 const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
   const { name, host, history } = props;
-  const [hasError, setError] = useState(null)
+  const [hasError, setError] = useState(null);
   const scriptId = `micro-frontend-script-${name}`;
 
   const registerStore = (reducers) => {
     store['injectReducer'](reducers);
-  }
+  };
 
   const renderMicroFrontend = useCallback(() => {
     (window as any)[`render${name}`] &&
-      (window as any)[`render${name}`](`${name}-container`, history, registerStore);
+      (window as any)[`render${name}`](
+        `${name}-container`,
+        history,
+        registerStore
+      );
   }, [name, history]);
 
   useEffect(() => {
@@ -27,13 +31,13 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
       renderMicroFrontend();
     } else {
       fetch(`${host}/asset-manifest.json`)
-        .then(res => res.json())
-        .then(manifest => {
+        .then((res) => res.json())
+        .then((manifest) => {
           const promises = Object.keys(manifest.files)
-            .filter(key => key.endsWith('.js'))
+            .filter((key) => key.endsWith('.js'))
             .reduce((sum, key) => {
               sum.push(
-                new Promise(resolve => {
+                new Promise((resolve) => {
                   const path = `${host}${manifest.files[key]}`;
                   const script = document.createElement('script');
 
@@ -49,7 +53,7 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
                   script.src = path;
 
                   document.body.after(script);
-                }),
+                })
               );
               return sum;
             }, [] as any);
@@ -57,13 +61,15 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
           Promise.allSettled(promises).then(() => {
             renderMicroFrontend();
           });
-        }).catch(error => {
+        })
+        .catch((error) => {
           setError(error);
         });
     }
 
     return () => {
       (window as any)[`unmount${name}`] &&
+        (window as any)[`unmount${name}`](`${name}-container`) &&
         (window as any)[`unmount${name}`](`${name}-container`);
     };
   }, [renderMicroFrontend, host, name, scriptId]);
