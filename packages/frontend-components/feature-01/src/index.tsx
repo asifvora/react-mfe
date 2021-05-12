@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configureStore from './store';
+// import FeatureOneApp from './FeatureOneApp';
 import { reducerMap } from './bundle';
 
 const store = configureStore();
@@ -15,28 +16,26 @@ declare global {
   }
 }
 
-interface IProps  {
-  history?: object;
+interface IProps {
+  containerId?: string;
+  history?: any;
   registerStore?: (reducers: any) => void;
-};
+}
 
-const FeatureOneApp  : React.FC<IProps> = (props) => {
+const FeatureOneApp: React.FC<IProps> = (props) => {
   const { history, registerStore } = props;
+  const [renderApp, setRenderApp] = useState(false);
 
   useEffect(() => {
     registerStore(reducerMap);
+    setRenderApp(true);
   }, [registerStore]);
 
-  return <App history={history} />
-}
+  return renderApp ? <App history={history} /> : null;
+};
 
 // render micro frontend
-window.renderFeatureOne = (containerId, history, registerStore) => {
-  ReactDOM.render(
-    <FeatureOneApp history={history} registerStore={registerStore}/>,
-    document.getElementById(containerId)
-  );
-};
+window.renderFeatureOne = FeatureOneApp
 
 // unmount micro frontend
 window.unmountFeatureOne = (containerId) => {

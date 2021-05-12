@@ -1,33 +1,40 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
+// import ErrorBoundary from '../components/ErrorBoundary';
 import store from '../store';
 
-interface IMicroFrontendProps {
+interface IProps {
   history: any;
   name: string;
   host: string;
 }
 
-const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
+const MicroFrontend: React.FC<IProps> = (props) => {
   const { name, host, history } = props;
   const [hasError, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   const scriptId = `micro-frontend-script-${name}`;
+  const containerId = `${name}-container`;
+  const renderApp = `render${name}`;
+  const unmountApp = `unmount${name}`;
 
   const registerStore = (reducers) => {
     store['injectReducer'](reducers);
   };
 
   const renderMicroFrontend = useCallback(() => {
-    (window as any)[`render${name}`] &&
-      (window as any)[`render${name}`](
-        `${name}-container`,
-        history,
-        registerStore
-      );
-  }, [name, history]);
+    // (window as any)[renderApp] &&
+    //   (window as any)[renderApp]({
+    //     containerId,
+    //     history,
+    //     registerStore,
+    //   });
+
+    (window as any)[renderApp] && setLoading(false);
+  }, [renderApp]);
 
   useEffect(() => {
-    if (document.getElementById(scriptId)) {
+    if (document.getElementById(scriptId) && (window as any)[renderApp]) {
       renderMicroFrontend();
     } else {
       fetch(`${host}/asset-manifest.json`)
@@ -52,7 +59,8 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
                   script.crossOrigin = '';
                   script.src = path;
 
-                  document.body.after(script);
+                  // document.body.after(script);
+                  document.head.appendChild(script);
                 })
               );
               return sum;
@@ -68,20 +76,27 @@ const MicroFrontend: React.FC<IMicroFrontendProps> = (props) => {
     }
 
     return () => {
-      (window as any)[`unmount${name}`] &&
-        (window as any)[`unmount${name}`](`${name}-container`) &&
-        (window as any)[`unmount${name}`](`${name}-container`);
+      (window as any)[unmountApp] &&
+        (window as any)[unmountApp](containerId) &&
+        (window as any)[unmountApp](containerId);
     };
-  }, [renderMicroFrontend, host, name, scriptId]);
+  }, [renderMicroFrontend, host, scriptId, unmountApp, renderApp, containerId]);
+
+  const App = window[renderApp];
 
   return (
     <>
+      {loading && <p> Loading...</p>}
       {hasError && <p> Failed to load {name}</p>}
-      <ErrorBoundary appName={name}>
-        <React.Suspense fallback="Loading...">
-          <main id={`${name}-container`} />
-        </React.Suspense>
-      </ErrorBoundary>
+      <main id={containerId}>
+        {!loading && !hasError && App && (
+          <App
+            containerId={scriptId}
+            history={history}
+            registerStore={registerStore}
+          />
+        )}
+      </main>
     </>
   );
 };
