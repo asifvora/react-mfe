@@ -1,14 +1,10 @@
 import React from "react";
 
-interface IProps {
-  appName: String;
-}
-
 interface IState {
   hasError: Boolean;
 }
 
-class ErrorBoundary extends React.Component<IProps, IState> {
+class ErrorBoundary extends React.Component<{}, IState> {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -20,7 +16,7 @@ class ErrorBoundary extends React.Component<IProps, IState> {
 
   render() {
     if (this.state.hasError) {
-      return <p>Failed to load {this.props.appName}</p>;
+      return <p>Something went wrong</p>;
     }
 
     return this.props.children;
