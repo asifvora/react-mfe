@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-// import ErrorBoundary from '../components/ErrorBoundary';
 import store from '../store';
 
 interface IProps {
@@ -23,13 +22,6 @@ const MicroFrontend: React.FC<IProps> = (props) => {
   };
 
   const renderMicroFrontend = useCallback(() => {
-    // (window as any)[renderApp] &&
-    //   (window as any)[renderApp]({
-    //     containerId,
-    //     history,
-    //     registerStore,
-    //   });
-
     (window as any)[renderApp] && setLoading(false);
   }, [renderApp]);
 
@@ -59,7 +51,6 @@ const MicroFrontend: React.FC<IProps> = (props) => {
                   script.crossOrigin = '';
                   script.src = path;
 
-                  // document.body.after(script);
                   document.head.appendChild(script);
                 })
               );
