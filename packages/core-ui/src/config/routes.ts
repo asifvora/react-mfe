@@ -1,10 +1,6 @@
-// import { lazy } from 'react';
+import { lazy } from 'react';
 import { createBrowserHistory } from 'history';
 import { routes as routes_config, IRoutesConfig } from './routes_config';
-import About from '../pages/About';
-import Home from '../pages/Home';
-import Contact from '../pages/Contact';
-import FeatureOne from '../micro-frontend/FeatureOne';
 
 export const history = createBrowserHistory();
 
@@ -13,18 +9,18 @@ export const history = createBrowserHistory();
 export const routes: IRoutesConfig = {
   [routes_config.index.id]: {
     ...routes_config.index,
-    component: Home
+    component: lazy(() => import('../pages/Home'))
   },
   [routes_config.featureOneApp.id]: {
     ...routes_config.featureOneApp,
-    component: FeatureOne
+    component: lazy(() => import('../micro-frontend/FeatureOne'))
   },
   [routes_config.about.id]: {
     ...routes_config.about,
-    component: About
+    component: lazy(() => import('../pages/About'))
   },
   [routes_config.contact.id]: {
     ...routes_config.contact,
-    component: Contact
+    component: lazy(() => import('../pages/Contact'))
   },  
 };

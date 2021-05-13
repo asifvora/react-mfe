@@ -22,6 +22,12 @@ const MicroFrontend: React.FC<IProps> = (props) => {
   };
 
   const renderMicroFrontend = useCallback(() => {
+     // (window as any)[renderApp] &&
+    //   (window as any)[renderApp]({
+    //     containerId,
+    //     history,
+    //     registerStore,
+    //   });
     (window as any)[renderApp] && setLoading(false);
   }, [renderApp]);
 
@@ -50,7 +56,7 @@ const MicroFrontend: React.FC<IProps> = (props) => {
 
                   script.crossOrigin = '';
                   script.src = path;
-
+         
                   document.head.appendChild(script);
                 })
               );
