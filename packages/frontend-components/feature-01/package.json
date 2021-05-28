@@ -58,7 +58,7 @@
   "scripts": {
     "postinstall": "typesync",
     "start": "react-scripts start",
-    "build": "rollup -c rollup.config.ts",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
