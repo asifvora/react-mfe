@@ -4,8 +4,6 @@ import { routes as routes_config, IRoutesConfig } from './routes_config';
 
 export const history = createBrowserHistory();
 
-// const FeatureOneApp = lazy(() => import('@mfe/feature-01/dist/exports'));
-
 export const routes: IRoutesConfig = {
   [routes_config.index.id]: {
     ...routes_config.index,

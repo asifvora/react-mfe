@@ -2,7 +2,7 @@ import React from 'react';
 import { Dispatch } from 'redux';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { incriment, decrement } from '../actions/counter';
-import { Button } from '@mfe/shared/dist/bundle';
+// import { Button } from '@mfe/shared/dist/bundle';
 
 export const Counter: React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch();
@@ -21,9 +21,9 @@ export const Counter: React.FC = () => {
 
   return (
     <>
-      <Button onClick={onIncriment}>+</Button>
+      <button onClick={onIncriment}>+</button>
       <p>count is :{count}</p>
-      <Button onClick={onDecrement}>-</Button>
+      <button onClick={onDecrement}>-</button>
     </>
   );
 };

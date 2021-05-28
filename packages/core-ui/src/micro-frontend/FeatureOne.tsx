@@ -1,4 +1,4 @@
-import MicroFrontend from './MicroFrontend';
+import { MicroFrontend } from './MicroFrontend';
 import { history as defaultHistory } from '../config/routes';
 import hostsConfig from '../config/host';
 

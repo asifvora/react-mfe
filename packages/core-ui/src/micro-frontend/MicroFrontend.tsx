@@ -7,7 +7,7 @@ interface IProps {
   host: string;
 }
 
-const MicroFrontend: React.FC<IProps> = (props) => {
+export const MicroFrontend: React.FC<IProps> = (props) => {
   const { name, host, history } = props;
   const [hasError, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,19 +17,15 @@ const MicroFrontend: React.FC<IProps> = (props) => {
   const renderApp = `render${name}`;
   const unmountApp = `unmount${name}`;
 
-  const registerStore = (reducers) => {
-    store['injectReducer'](reducers);
-  };
-
   const renderMicroFrontend = useCallback(() => {
-     // (window as any)[renderApp] &&
-    //   (window as any)[renderApp]({
-    //     containerId,
-    //     history,
-    //     registerStore,
-    //   });
+     (window as any)[renderApp] &&
+      (window as any)[renderApp]({
+        containerId,
+        history,
+        store,
+      });
     (window as any)[renderApp] && setLoading(false);
-  }, [renderApp]);
+  }, [renderApp, containerId, history]);
 
   useEffect(() => {
     if (document.getElementById(scriptId) && (window as any)[renderApp]) {
@@ -79,21 +75,11 @@ const MicroFrontend: React.FC<IProps> = (props) => {
     };
   }, [renderMicroFrontend, host, scriptId, unmountApp, renderApp, containerId]);
 
-  const App = window[renderApp];
-
   return (
     <>
       {loading && <p> Loading...</p>}
       {hasError && <p> Failed to load {name}</p>}
-      <main id={containerId}>
-        {!loading && !hasError && App && (
-          <App
-            containerId={scriptId}
-            history={history}
-            registerStore={registerStore}
-          />
-        )}
-      </main>
+      <main id={containerId}></main>
     </>
   );
 };

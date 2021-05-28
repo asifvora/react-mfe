@@ -2,7 +2,7 @@ import React from 'react';
 import { Dispatch } from 'redux';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { incriment, decrement } from '../actions/alerts';
-import { Button } from '@mfe/shared/dist/bundle';
+// import { Button } from '@mfe/shared/dist/bundle';
 
 export const Alerts: React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch();
@@ -21,9 +21,9 @@ export const Alerts: React.FC = () => {
 
   return (
     <div>
-      <Button primary onClick={onIncriment}>+</Button>
+      <button  onClick={onIncriment}>+</button>
         <p>Alerts is :{count}</p>
-      <Button primary onClick={onDecrement}>-</Button>
+      <button  onClick={onDecrement}>-</button>
     </div>
   );
 };

@@ -18,6 +18,7 @@ export const App: React.FC = () => {
           <Routes />
         </Suspense>
       </Router>
+      <footer>This is footer</footer>
     </ErrorBoundary>
   );
 };
