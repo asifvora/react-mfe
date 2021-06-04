@@ -37,6 +37,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
           const promises = Object.keys(manifest.files)
             .filter((key) => key.endsWith('.js'))
             .reduce((sum, key) => {
+              console.log(sum, key)
               sum.push(
                 new Promise((resolve) => {
                   const path = `${host}${manifest.files[key]}`;
@@ -53,7 +54,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
                   script.crossOrigin = '';
                   script.src = path;
          
-                  document.head.appendChild(script);
+                  key === 'main.js' && document.head.appendChild(script);
                 })
               );
               return sum;
@@ -65,6 +66,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
         })
         .catch((error) => {
           setError(error);
+          setLoading(false);
         });
     }
 
