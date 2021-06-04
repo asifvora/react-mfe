@@ -37,7 +37,6 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
           const promises = Object.keys(manifest.files)
             .filter((key) => key.endsWith('.js'))
             .reduce((sum, key) => {
-              console.log(sum, key)
               sum.push(
                 new Promise((resolve) => {
                   const path = `${host}${manifest.files[key]}`;
