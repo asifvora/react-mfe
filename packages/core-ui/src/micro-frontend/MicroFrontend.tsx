@@ -54,7 +54,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
                   script.crossOrigin = '';
                   script.src = path;
          
-                  key === 'main.js' && document.head.appendChild(script);
+                  document.head.appendChild(script);
                 })
               );
               return sum;
