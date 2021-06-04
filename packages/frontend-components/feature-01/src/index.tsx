@@ -30,7 +30,7 @@ const FeatureOneApp: React.FC<IProps> = (props) => {
     setRenderApp(true);
   }, [store]);
 
-  return renderApp ? <Provider store={store}><App history={history} /></Provider> : null;
+  return renderApp ? <Provider store={store || {}}><App history={history} /></Provider> : null;
 };
 
 // render micro frontend
