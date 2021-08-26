@@ -3,15 +3,21 @@ import { Routes } from './Routes/Routes';
 import { createBrowserHistory } from 'history';
 import './scss/index.scss';
 
-const history = createBrowserHistory();
+const defaultHistory = createBrowserHistory();
 
-function App() {
-	return (
-		<Router history={history}>
-			<span className="title">Hello 007</span>
-			<Routes />
-		</Router>
-	);
-}
+export type IProps = {
+  history?: any;
+};
+
+export const App: React.FC<IProps> = (props) => {
+  const { history } = props;
+
+  return (
+    <Router history={history || defaultHistory}>
+      <span className="title">Hello</span>
+      <Routes />
+    </Router>
+  );
+};
 
 export default App;

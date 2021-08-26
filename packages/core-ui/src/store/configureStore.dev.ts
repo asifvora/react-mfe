@@ -2,19 +2,34 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from '../reducers';
+import createReducer from '../reducers';
 
 const configureStore = () => {
-	const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, createLogger())));
+  const store = createStore(
+    createReducer(),
+    composeWithDevTools(applyMiddleware(thunk, createLogger()))
+  );
 
-	if (module.hot) {
-		// Enable Webpack hot module replacement for reducers
-		module.hot.accept('../reducers', () => {
-			store.replaceReducer(rootReducer);
-		});
-	}
+  store['asyncReducers'] = {};
 
-	return store;
+  store['injectReducer'] = (reducers: any) => {
+    store['asyncReducers'] = {
+      ...reducers,
+    };
+	
+    store.replaceReducer(createReducer(store['asyncReducers']));
+
+    return store;
+  };
+
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('../reducers', () => {
+      store.replaceReducer(createReducer(store['asyncReducers']));
+    });
+  }
+
+  return store;
 };
 
 export default configureStore;
