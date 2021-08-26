@@ -4,7 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import externals from 'rollup-plugin-node-externals';
 import json from 'rollup-plugin-json';
 import tsPlugin from '@rollup/plugin-typescript';
-import cleaner from 'rollup-plugin-cleaner';
+// import cleaner from 'rollup-plugin-cleaner';
 import bundleScss from 'rollup-plugin-bundle-scss';
 
 const commonPlugins = [
@@ -34,9 +34,9 @@ const config = [
 	{
 		input: './src/bundle.ts',
 		plugins: [
-			cleaner({
-				targets: ['./dist/'],
-			}),
+			// cleaner({
+			// 	targets: ['./dist/'], //disable for temporary
+			// }),
 			...commonPlugins,
 		],
 		output: {
