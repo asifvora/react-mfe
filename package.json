@@ -31,6 +31,6 @@
     "build": "yarn lerna run build",
     "link": "yarn lerna run link",
     "clean": "yarn lerna run clean",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "yarn lerna bootstrap"
   }
 }
