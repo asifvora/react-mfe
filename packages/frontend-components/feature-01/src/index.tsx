@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { reducerMap } from './bundle';
+import { reducerMap } from './reducers';
 import configureStore from './store';
 
 const store = configureStore();

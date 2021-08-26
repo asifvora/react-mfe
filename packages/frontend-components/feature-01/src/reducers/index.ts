@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
 import alerts from './alerts';
 
-const rootReducer = combineReducers({
+export const reducerMap = {
   alerts,
+};
+
+const rootReducer = combineReducers({
+  ...reducerMap,
 });
 
 export default rootReducer;
