@@ -9,13 +9,13 @@ export const StyledButton = styled.button<IStyledButtonProps>`
   background: transparent;
   border-radius: 3px;
   border: 2px solid palevioletred;
-  color: palevioletred;
+  color: #fa0758;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
   cursor: pointer;
 
   ${props => props.primary && css`
-    background: palevioletred;
+    background: #090643;
     color: white;
   `}
 `;
