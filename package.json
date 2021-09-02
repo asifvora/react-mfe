@@ -27,7 +27,6 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "postinstall": "typesync",
     "build": "yarn lerna run build",
     "link": "yarn lerna run link",
     "clean": "yarn lerna run clean",

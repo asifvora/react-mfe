@@ -37,3 +37,22 @@ A micro frontend implementation for react js
 - Storybook
 - Router Config
 - Some services and utils
+
+
+## Docker build
+```sh
+$ docker build -t <docker-image-name> <filepath>
+$ docker build -t react-mfe .
+$ docker image ls
+```
+
+## Run a Container
+```sh
+$ docker run -d -p <Host port>:<Docker port> <docker-image-name>
+$ docker run -d -p 9090:5000 react-mfe
+$ <image-id>
+```
+## Check the running container
+```sh
+$ docker ps -a
+```
