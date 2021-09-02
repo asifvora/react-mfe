@@ -35,7 +35,7 @@ jobs:
       - name: Linking packages
         run: yarn lerna bootstrap
       - name: Make a build
-        run: lerna run build --include-dependencies --stream
+        run: yarn workspace @mfe/shared run build && yarn lerna run build
       - name: Copy mfe build folder
         run : ./packages/frontend-components/feature-01/build ./packages/core-ui/build/feature-one
       - name: Deploy app build to S3 bucket
