@@ -27,7 +27,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "build": "yarn lerna run build",
+    "build": "yarn lerna run build --ignore=@mfe/shared",
+    "prebuild": "yarn lerna run build --scope=@mfe/shared",
     "link": "yarn lerna run link",
     "clean": "yarn lerna run clean",
     "bootstrap": "yarn lerna bootstrap"
