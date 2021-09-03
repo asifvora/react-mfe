@@ -1,11 +1,7 @@
-import React from 'react';
+import { Works } from '../components/Works';
 
-function Home() {
-  return (
-    <h1>
-      Home
-    </h1>
-  );
-}
+const Home: React.FC = () => {
+  return <Works />;
+};
 
 export default Home;
