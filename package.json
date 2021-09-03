@@ -24,7 +24,8 @@
     "redux": "^4.1.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "react-icons": "^4.2.0"
   },
   "scripts": {
     "build": "yarn lerna run build --ignore=@mfe/shared",

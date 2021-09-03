@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { toast } from '@mfe/shared/dist/bundle';
 import { Provider } from 'react-redux'
 import store from './store'
+import GlobalStyles from './GlobalStyles';
 
 import './scss/index.scss';
 
@@ -13,7 +14,8 @@ toast.configure({ hideProgressBar: true, autoClose: 3000 });
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <App /> 
+      <GlobalStyles />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

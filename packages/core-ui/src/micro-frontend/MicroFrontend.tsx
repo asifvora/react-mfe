@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import store from '../store';
+import { Loader } from '../components/Loader';
 
 interface IProps {
   history: any;
@@ -78,7 +79,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
 
   return (
     <>
-      {loading && <p> Loading...</p>}
+      {loading && <Loader />}
       {hasError && <p> Failed to load {name}</p>}
       <main id={containerId}></main>
     </>
