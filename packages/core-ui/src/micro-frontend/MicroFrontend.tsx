@@ -78,27 +78,19 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
     };
   }, [renderMicroFrontend, host, scriptId, unmountApp, renderApp, containerId]);
 
-  if (loading) {
-    return <Loader />;
-  }
-
-  if (hasError) {
-    return (
-      <>
-        <h1>
-          {isDevelopment
-            ? `${name} failed to load. Check if dev-server is running.`
-            : 'This page failed to load'}
-        </h1>
-        <p>
-          {isDevelopment ? hasError: 'Please try again later.'}
-        </p>
-      </>
-    );
-  }
-
   return (
     <>
+      {loading && <Loader />}
+      {hasError && (
+        <>
+          <h1>
+            {isDevelopment
+              ? `${name} failed to load. Check if dev-server is running.`
+              : 'This page failed to load'}
+          </h1>
+          <p>{isDevelopment ? hasError : 'Please try again later.'}</p>
+        </>
+      )}
       <main id={containerId}></main>
     </>
   );
