@@ -1,11 +1,7 @@
-import React from 'react';
+import { Welcome } from '../components/Welcome';
 
-function About() {
-  return (
-    <h1>
-      About
-    </h1>
-  );
-}
+const About: React.FC = () => {
+  return <Welcome />;
+};
 
 export default About;
