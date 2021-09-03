@@ -48,13 +48,13 @@ export const routes: IRoutesConfig = {
     isPrivate: false,
     component: undefined
   },
-  contact: {
-    id: 'contact',
-    name: 'Contact',
-    description: 'Contact',
-    path: '/contact',
+  recipes: {
+    id: 'recipes',
+    name: 'Recipes',
+    description: 'Recipes',
+    path: '/recipes',
     path_string: () => {
-      return `/contact`;
+      return `/recipes`;
     },
     exact: true,
     isPrivate: false,

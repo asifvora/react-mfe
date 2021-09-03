@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
                 </MenuLink>
               </MenuItem>
               <MenuItem>
-                <MenuLink onClick={closeMenu} to={routes.contact.path_string()}>
+                <MenuLink onClick={closeMenu} to={routes.recipes.path_string()}>
                   Recipes
                 </MenuLink>
               </MenuItem>

@@ -17,8 +17,8 @@ export const routes: IRoutesConfig = {
     ...routes_config.about,
     component: lazy(() => import('../pages/About'))
   },
-  [routes_config.contact.id]: {
-    ...routes_config.contact,
-    component: lazy(() => import('../pages/Contact'))
+  [routes_config.recipes.id]: {
+    ...routes_config.recipes,
+    component: lazy(() => import('../pages/Recipes'))
   },  
 };
