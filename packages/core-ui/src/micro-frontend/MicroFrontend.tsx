@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import store from '../store';
 import { Loader } from '../components/Loader';
+import { isDevelopment } from '../config/env';
 
 interface IProps {
   history: any;
@@ -19,7 +20,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
   const unmountApp = `unmount${name}`;
 
   const renderMicroFrontend = useCallback(() => {
-     (window as any)[renderApp] &&
+    (window as any)[renderApp] &&
       (window as any)[renderApp]({
         containerId,
         history,
@@ -53,7 +54,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
 
                   script.crossOrigin = '';
                   script.src = path;
-         
+
                   document.head.appendChild(script);
                 })
               );
@@ -65,7 +66,7 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
           });
         })
         .catch((error) => {
-          setError(error);
+          setError(error?.message);
           setLoading(false);
         });
     }
@@ -77,10 +78,27 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
     };
   }, [renderMicroFrontend, host, scriptId, unmountApp, renderApp, containerId]);
 
+  if (loading) {
+    return <Loader />;
+  }
+
+  if (hasError) {
+    return (
+      <>
+        <h1>
+          {isDevelopment
+            ? `${name} failed to load. Check if dev-server is running.`
+            : 'This page failed to load'}
+        </h1>
+        <p>
+          {isDevelopment ? hasError: 'Please try again later.'}
+        </p>
+      </>
+    );
+  }
+
   return (
     <>
-      {loading && <Loader />}
-      {hasError && <p> Failed to load {name}</p>}
       <main id={containerId}></main>
     </>
   );

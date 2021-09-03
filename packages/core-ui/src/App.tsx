@@ -4,14 +4,14 @@ import { history } from './config/routes';
 import { Routes } from './Routes';
 import { Loader } from './components/Loader';
 import { Footer } from './components/Footer';
-import Header from './components/Header';
+import { Hero } from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
 
 export const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <Router history={history}>
-        <Header />
+        <Hero />
         <Suspense fallback={Loader}>
           <Routes />
         </Suspense>
