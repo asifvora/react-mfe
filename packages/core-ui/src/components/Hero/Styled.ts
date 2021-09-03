@@ -20,7 +20,7 @@ export const HeroContainer = styled.div`
 export const HeroContent = styled.section`
   height: 100%;
   width: 100%;
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: center;

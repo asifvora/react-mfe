@@ -2,6 +2,12 @@ import React, { useEffect, useState, useCallback } from 'react';
 import store from '../store';
 import { Loader } from '../components/Loader';
 import { isDevelopment } from '../config/env';
+import {
+  ErrorContent,
+  ErrorContentText,
+  ErrorContentTitle,
+  ErrorText,
+} from './Styled';
 
 interface IProps {
   history: any;
@@ -82,14 +88,18 @@ export const MicroFrontend: React.FC<IProps> = (props) => {
     <>
       {loading && <Loader />}
       {hasError && (
-        <>
-          <h1>
-            {isDevelopment
-              ? `${name} failed to load. Check if dev-server is running.`
-              : 'This page failed to load'}
-          </h1>
-          <p>{isDevelopment ? hasError : 'Please try again later.'}</p>
-        </>
+        <ErrorContent>
+          <ErrorContentText>
+            <ErrorContentTitle>
+              {isDevelopment
+                ? `${name} failed to load. Check if dev-server is running.`
+                : 'This page failed to load'}
+            </ErrorContentTitle>
+            <ErrorText>
+              {isDevelopment ? hasError : 'Please try again later.'}
+            </ErrorText>
+          </ErrorContentText>
+        </ErrorContent>
       )}
       <main id={containerId}></main>
     </>
