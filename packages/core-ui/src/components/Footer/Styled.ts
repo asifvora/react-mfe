@@ -6,13 +6,13 @@ export const FooterSection = styled.section`
   align-items: center;
   color: #fff;
   background-color: #333;
-  padding: 1rem 2rem 2rem 2rem;
 `;
 
 export const FooterContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 1rem 3rem 2rem;
   ${Container}
 `;
 
