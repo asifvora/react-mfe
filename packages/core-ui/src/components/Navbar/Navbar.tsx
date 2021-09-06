@@ -47,30 +47,6 @@ export const Navbar: React.FC = () => {
                   Recipes
                 </MenuLink>
               </MenuItem>
-              <MenuItem>
-                <MenuLink
-                  onClick={closeMenu}
-                  to={`${routes.featureOneApp.path_string()}/order`}
-                >
-                  Order
-                </MenuLink>
-              </MenuItem>
-              <MenuItem>
-                <MenuLink
-                  onClick={closeMenu}
-                  to={`${routes.featureOneApp.path_string()}/wish-list`}
-                >
-                  Wishlist
-                </MenuLink>
-              </MenuItem>
-              <MenuItem>
-                <MenuLink
-                  onClick={closeMenu}
-                  to={`${routes.featureOneApp.path_string()}/alerts`}
-                >
-                  Alerts
-                </MenuLink>
-              </MenuItem>
             </Menu>
           </NavbarContainer>
         </Nav>

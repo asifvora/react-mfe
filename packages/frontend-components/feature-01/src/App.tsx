@@ -14,7 +14,6 @@ export const App: React.FC<IProps> = (props) => {
 
   return (
     <Router history={history || defaultHistory}>
-      <span className="title">Hello</span>
       <Routes />
     </Router>
   );

@@ -1,5 +1,7 @@
 import { OutlineButton } from '../../GlobalStyles';
-import { images } from '../../config/images'
+import { images } from '../../config/images';
+import { routes } from '../../config/routes_config';
+import { history } from '../../config/routes';
 import {
   RecipeContainer,
   RecipeWrapper,
@@ -34,6 +36,11 @@ import {
 } from './Styled';
 
 export const Recipes: React.FC = () => {
+  const onDetailsPage = (type: string) => {
+    const path = `${routes.featureOneApp.path_string()}/recipe-details/${type}`;
+    history.push(path);
+  };
+
   return (
     <RecipeWrapper>
       <RecipeContainer>
@@ -52,7 +59,7 @@ export const Recipes: React.FC = () => {
             </RecipeBtn>
             <RecipeBtn>
               <OutlineButton big fontBig bigRadius>
-                Meat and Poultry  
+                Meat and Poultry
               </OutlineButton>
             </RecipeBtn>
             <RecipeBtn>
@@ -62,7 +69,7 @@ export const Recipes: React.FC = () => {
             </RecipeBtn>
           </RecipeTabContainer>
           <RecipeCardWrapper>
-            <RecipeFeature>
+            <RecipeFeature onClick={() => onDetailsPage('Chicken Recipe')}>
               <RecipeImg src={images.salmon.default} alt="Salmon Recipe" />
               <RecipeFeatureContent>
                 <RecipeFeatureTitle>
@@ -94,7 +101,7 @@ export const Recipes: React.FC = () => {
             </RecipeFeature>
             <RecipeCardSection>
               <RecipeSmallCards>
-                <RecipeCard>
+                <RecipeCard onClick={() => onDetailsPage('Chicken Recipe')}>
                   <Img src={images.salmon.default} alt="Chicken Recipe" />
                   <RecipeCardContent>
                     <RecipeCardHeading>
@@ -119,7 +126,7 @@ export const Recipes: React.FC = () => {
                     </RecipeCardDetails>
                   </RecipeCardContent>
                 </RecipeCard>
-                <RecipeCard>
+                <RecipeCard onClick={() => onDetailsPage('Chicken Recipe')}>
                   <Img src={images.salmon.default} alt="Salad Recipe" />
                   <RecipeCardContent>
                     <RecipeCardHeading>Sesame Asian Salad</RecipeCardHeading>
@@ -144,7 +151,7 @@ export const Recipes: React.FC = () => {
                 </RecipeCard>
               </RecipeSmallCards>
               <RecipeSmallCards>
-                <RecipeCard>
+                <RecipeCard onClick={() => onDetailsPage('Chicken Recipe')}>
                   <Img src={images.salmon.default} alt="Pizza Recipe" />
                   <RecipeCardContent>
                     <RecipeCardHeading>
@@ -169,7 +176,7 @@ export const Recipes: React.FC = () => {
                     </RecipeCardDetails>
                   </RecipeCardContent>
                 </RecipeCard>
-                <RecipeCard>
+                <RecipeCard onClick={() => onDetailsPage('Chicken Recipe')}>
                   <Img src={images.salmon.default} alt="Pasta Recipe" />
                   <RecipeCardContent>
                     <RecipeCardHeading>

@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 import Order from '../components/Order';
 import WishList from '../components/WishList';
 import Alerts from '../components/Alerts';
+import { RecipeDetails } from '../components/RecipeDetails';
 
 export const RoutesList = [
 	{
@@ -18,6 +19,11 @@ export const RoutesList = [
 		path: () => '/feature-one/alerts',
 		exact: true,
 		component: Alerts,
+	},
+	{
+		path: () => '/feature-one/recipe-details/:slug',
+		exact: true,
+		component: RecipeDetails,
 	},
 ];
 
