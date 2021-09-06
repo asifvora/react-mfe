@@ -1,5 +1,6 @@
 import { OutlineButton, Container } from '@mfe/shared/dist/bundle';
 import { images } from '../../config/images';
+import host from '../../config/host';
 import {
   MealsContainer,
   MealsWrapper,
@@ -23,7 +24,7 @@ export const RecipeDetails: React.FC = () => {
         <MealsWrapper>
           <MealsImage>
             <Img
-              src={images.bigChicken.default}
+              src={`${host.featureOne}${images.bigChicken.default}`}
               alt="Personalized Chicken meal"
             />
           </MealsImage>
