@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { HiUsers } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
 import { Container } from '../../GlobalStyles';
 
 export const RecipeWrapper = styled.section`
@@ -43,7 +42,7 @@ export const RecipeTabContainer = styled.div`
   }
 `;
 
-export const RecipeBtn = styled(Link)`
+export const RecipeBtn = styled.div`
   &:not(:last-child) {
     margin-right: 3rem;
   }

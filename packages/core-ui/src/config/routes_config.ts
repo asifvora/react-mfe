@@ -71,5 +71,17 @@ export const routes: IRoutesConfig = {
     exact: false,
     isPrivate: false,
     component: undefined
+  },
+  notFound: {
+    id: 'notFound',
+    name: '404',
+    description: 'Page not found',
+    path: '/*',
+    path_string: () => {
+      return `/404`;
+    },
+    exact: false,
+    isPrivate: false,
+    component: undefined
   }
 };

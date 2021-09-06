@@ -21,4 +21,8 @@ export const routes: IRoutesConfig = {
     ...routes_config.recipes,
     component: lazy(() => import('../pages/Recipes'))
   },  
+  [routes_config.notFound.id]: {
+    ...routes_config.notFound,
+    component: lazy(() => import('../pages/NotFound'))
+  },  
 };

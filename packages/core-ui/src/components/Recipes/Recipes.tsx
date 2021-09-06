@@ -40,22 +40,22 @@ export const Recipes: React.FC = () => {
         <RecipeTitle>Recipes</RecipeTitle>
         <RecipeContentContainer>
           <RecipeTabContainer>
-            <RecipeBtn to="/sea-food">
+            <RecipeBtn>
               <OutlineButton big bigFont bigRadius>
                 Sea Food
               </OutlineButton>
             </RecipeBtn>
-            <RecipeBtn to="/Vegetarian">
+            <RecipeBtn>
               <OutlineButton big fontBig bigRadius>
                 Vegetarian
               </OutlineButton>
             </RecipeBtn>
-            <RecipeBtn to="/meat">
+            <RecipeBtn>
               <OutlineButton big fontBig bigRadius>
-                Meat and Poultry
+                Meat and Poultry  
               </OutlineButton>
             </RecipeBtn>
-            <RecipeBtn to="/easy-preps">
+            <RecipeBtn>
               <OutlineButton big fontBig bigRadius>
                 Easy meal preps
               </OutlineButton>
