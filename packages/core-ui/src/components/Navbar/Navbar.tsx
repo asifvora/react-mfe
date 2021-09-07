@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
           <NavbarContainer>
             <NavLogo to={routes.index.path_string()}>
               <NavIcon />
-              Food Wood
+              Food HQ
             </NavLogo>
             <MenuIcon onClick={handleClick}>
               {click ? <BiX /> : <BiMenu />}

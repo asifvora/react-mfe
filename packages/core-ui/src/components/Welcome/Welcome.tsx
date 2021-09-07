@@ -19,7 +19,7 @@ export const Welcome: React.FC = () => {
           <WelcomeContentText>
             <WelcomeContentTitle>Welcome</WelcomeContentTitle>
             <WelcomeText>
-              Food wood is a great way to make meals at home that are health and
+              Food HQ is a great way to make meals at home that are health and
               enjoyable. We have a variety of categories to choose from that
               help meet your needs in your health journey. You can customize the
               ingredients you want to be added in your meal. This can be due to
