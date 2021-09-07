@@ -30,20 +30,24 @@ const FeatureOneApp: React.FC<IProps> = (props) => {
     setRenderApp(true);
   }, [store]);
 
-  return renderApp ? <Provider store={store || {}}><App history={history} /></Provider> : null;
+  return renderApp ? (
+    <Provider store={store || {}}>
+      <App history={history} scope="#FeatureOne-container" />
+    </Provider>
+  ) : null;
 };
 
 // render micro frontend
 window.renderFeatureOne = ({ containerId, history, store }) => {
   ReactDOM.render(
-    <FeatureOneApp history={history} store={store}/>,
+    <FeatureOneApp history={history} store={store} />,
     document.getElementById(containerId)
   );
 };
 
 // unmount micro frontend
 window.unmountFeatureOne = (containerId) => {
-  const element = document.getElementById(containerId)
+  const element = document.getElementById(containerId);
   element && ReactDOM.unmountComponentAtNode(element);
 };
 
@@ -52,7 +56,7 @@ if (!document.getElementById('FeatureOne-container')) {
   ReactDOM.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <App scope="#root" />
       </Provider>
     </React.StrictMode>,
     document.getElementById('root')
