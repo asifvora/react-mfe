@@ -1,4 +1,7 @@
-// tslint:disable:no-console
+// eslint-disable-next-line no-restricted-globals
+const ignored = self['__WB_MANIFEST'];
+
+// Your custom service worker code goes here.// tslint:disable:no-console
 // In production, we register a service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives
