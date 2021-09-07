@@ -1,15 +1,10 @@
 import { Router } from 'react-router-dom';
 import { Routes } from './Routes/Routes';
+import { StyleProvider } from './StyleProvider';
 import { createBrowserHistory } from 'history';
 import './scss/index.scss';
-import { StyleSheetManager } from 'styled-components';
-import extraScopePlugin from 'stylis-plugin-extra-scope';
 
 const defaultHistory = createBrowserHistory();
-
-Object.defineProperty(extraScopePlugin, 'name', {
-  value: 'asif',
-});
 
 export type IProps = {
   history?: any;
@@ -18,14 +13,13 @@ export type IProps = {
 
 export const App: React.FC<IProps> = (props) => {
   const { history, scope } = props;
-  const stylisPlugins = scope ? [extraScopePlugin(`${scope}`)] : [];
 
   return (
-    <StyleSheetManager stylisPlugins={stylisPlugins}>
+    <StyleProvider scope={scope}>
       <Router history={history || defaultHistory}>
         <Routes />
       </Router>
-    </StyleSheetManager>
+    </StyleProvider>
   );
 };
 
