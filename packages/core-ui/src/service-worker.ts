@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-restricted-globals
+// eslint-disable-next-line 
 const ignored = self['__WB_MANIFEST'];
 
 // Your custom service worker code goes here.// tslint:disable:no-console

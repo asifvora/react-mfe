@@ -30,6 +30,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/redux-logger": "^3.0.8",
     "@types/testing-library__jest-dom": "^5.9.5",
+    "cross-env": "^7.0.3",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "node-sass": "^4.0.0",
@@ -46,9 +47,9 @@
   },
   "scripts": {
     "postinstall": "typesync",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "cross-env craco  start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -84,6 +85,8 @@
     }
   },
   "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "craco-workbox": "^0.1.0",
     "react-loader-spinner": "^4.0.0"
   }
 }
