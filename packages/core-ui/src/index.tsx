@@ -6,7 +6,7 @@ import { toast } from '@mfe/shared/dist/bundle';
 import { Provider } from 'react-redux'
 import store from './store'
 import GlobalStyles from './GlobalStyles';
-import * as serviceWorker from './service-worker';
+import * as serviceWorker from './serviceWorker';
 
 import './scss/index.scss';
 
