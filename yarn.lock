@@ -16624,6 +16624,11 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
+stylis-plugin-extra-scope@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/stylis-plugin-extra-scope/-/stylis-plugin-extra-scope-0.3.0.tgz#8a19135273856694f7559a78d4d7a48928cd03e4"
+  integrity sha512-SaZ+SQk9saypYdJPmVv0cboRGyknxtvWdw1eCphd24wYKdgLdoLMZrZi4w3F24mLFCd+De8hCTPcfJXmL+C1Xg==
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
