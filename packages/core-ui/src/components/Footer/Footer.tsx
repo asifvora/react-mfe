@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   return (
     <FooterSection>
       <FooterContainer>
-        <FooterCopyRight href="https://github.com/asifvora/react-mfe" target="_blank">
+        <FooterCopyRight rel="noreferrer" href="https://github.com/asifvora/react-mfe" target="_blank">
           &copy; Copyright {year}
         </FooterCopyRight>
       </FooterContainer>
