@@ -22,6 +22,9 @@ export const WorksContainer = styled(Container)`
 export const WorksTitle = styled.h2`
   font-size: clamp(2rem, 8.5vw, 5rem);
   font-weight: bold;
+  @media only screen and (max-width: 900px) {
+    font-size: clamp(1rem, 6.5vw, 5rem);
+  }
 `;
 
 export const WorksCardContent = styled.div`
