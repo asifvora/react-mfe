@@ -3,8 +3,9 @@ import * as ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { toast } from '@mfe/shared/dist/bundle';
-import { Provider } from 'react-redux'
-import store from './store'
+import { Provider } from 'react-redux';
+import { Theme as ThemeProvider } from './ThemeProvider';
+import store from './store';
 import GlobalStyles from './GlobalStyles';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
@@ -15,8 +16,10 @@ toast.configure({ hideProgressBar: true, autoClose: 3000 });
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App /> 
-      <GlobalStyles />
+      <ThemeProvider>
+        <GlobalStyles />
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 import { BiMenu, BiX } from 'react-icons/bi';
 import { routes } from '../../config/routes_config';
+import { ToggleSwitch } from '../ToggleSwitch';
+
 import {
   Nav,
   NavbarContainer,
@@ -47,6 +49,7 @@ export const Navbar: React.FC = () => {
                   Recipes
                 </MenuLink>
               </MenuItem>
+              <ToggleSwitch />
             </Menu>
           </NavbarContainer>
         </Nav>
