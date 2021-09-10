@@ -51,10 +51,10 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  body: '#F9F9F9',
-  text: '#fff',
+  body: '#cccc',
+  text: '#e38b06',
   colors : {
-    hover: '#e38b06',
+    hover: '#fff',
     background: '#333'
   }
 };

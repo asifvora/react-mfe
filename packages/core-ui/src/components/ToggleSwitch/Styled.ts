@@ -12,7 +12,7 @@ export const CheckBoxLabel = styled.label`
   right: 0;
   bottom: 0;
   width: 50px;
-  height: 30px;
+  height: 26px;
   border-radius: 15px;
   background: #bebebe;
   cursor: pointer;
@@ -20,12 +20,13 @@ export const CheckBoxLabel = styled.label`
     content: '';
     display: block;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin: 5px;
+    width: 26px;
+    height: 26px;
+    margin: 0px 5px 5px 0px;
     background: #ffffff;
     box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
-    transition: 0.2s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
 `;
 
@@ -40,11 +41,12 @@ export const CheckBox = styled.input`
       content: '';
       display: block;
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      margin: 5px;
-      margin-left: 27px;
-      transition: 0.2s;
+      width: 26px;
+      height: 26px;
+      margin: 0px 5px 5px 0px;
+      margin-left: 23px;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
     }
   }
 `;
