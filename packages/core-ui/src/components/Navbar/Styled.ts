@@ -71,7 +71,7 @@ export const Menu = styled.ul`
     height: 100vh;
     position: absolute;
     top: 80px;
-    left: ${({ click } : { click : any} ) => (click ? '0' : '-100%')};
+    left: ${({ click }: { click: any }) => (click ? '0' : '-100%')};
     background-color: rgba(0, 0, 0, 0.9);
     transition: all 0.5s ease;
   }
@@ -92,7 +92,7 @@ export const MenuLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   font-size: 2rem;
-  color: #fff;
+  color: ${({ theme }) => theme.text};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,12 +100,12 @@ export const MenuLink = styled(Link)`
   height: 100%;
   transition: all 0.2s ease;
   &:hover {
-    color: #e38b06;
+    color: ${({ theme }) => theme.colors.hover};
     transform: traslateY(-3rem);
   }
   &:active {
     transform: traslateY(3rem);
-    color: #e38b06;
+    color: ${({ theme }) => theme.colors.hover};
   }
   @media only screen and (max-width: 1000px) {
     display: block;

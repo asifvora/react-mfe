@@ -1,10 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 import { OutlineButton, Container } from '@mfe/shared/dist/bundle';
 
+export type IThemeColors = {
+  hover: string,
+  background: string,
+};
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     body: string;
     text: string;
+    colors: IThemeColors;
   }
 }
   
@@ -31,18 +37,26 @@ body{
     line-height: 1.6;
     font-size: 1.6rem;
     background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
 }`;
 
 export default GlobalStyles;
 
 export const lightTheme = {
   body: '#F9F9F9',
-  text: '#333',
+  text: '#fff',
+  colors : {
+    hover: '#e38b06',
+    background: '#333'
+  }
 };
+
 export const darkTheme = {
-  body: '#121620',
-  text: '#f1f1f1',
+  body: '#F9F9F9',
+  text: '#fff',
+  colors : {
+    hover: '#e38b06',
+    background: '#333'
+  }
 };
 
 export type IStyledOutlineButtonProps = {

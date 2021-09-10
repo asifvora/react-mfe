@@ -11,9 +11,9 @@ export const HeroContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 74vh;
+  height: 54vh;
   @media only screen and (max-width: 1600px) {
-    height: 85vh;
+    height: 65vh;
   }
 `;
 
@@ -35,7 +35,6 @@ export const HeroContent = styled.section`
 
 export const HeroContentText = styled.div`
   width: 50%;
-  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

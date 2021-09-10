@@ -2,23 +2,22 @@ import styled from 'styled-components';
 
 export const FooterSection = styled.section`
   display: flex;
+  justify-content: center;
   align-items: center;
-  color: #fff;
-  background-color: #333;
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.colors.background};
   padding: 3rem;
-  text-align: center;
 `;
 
 export const FooterContainer = styled.div`
   display: flex;
-  align-items: center;
 `;
 
 export const FooterCopyRight = styled.a`
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: ${({ theme }) => theme.text};
   &:hover {
-    color: #e38b06;
+    color: ${({ theme }) => theme.colors.hover};
   }
 `;
