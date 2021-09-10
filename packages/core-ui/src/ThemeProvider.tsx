@@ -15,7 +15,7 @@ export const Theme: React.FC<IProps> = (props) => {
   );
 
   return (
-    <ThemeProvider theme={themeMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={themeMode === 'dark' ? darkTheme : lightTheme}>
       {children}
     </ThemeProvider>
   );
