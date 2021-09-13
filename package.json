@@ -32,6 +32,7 @@
     "prebuild": "yarn lerna run build --scope=@mfe/shared",
     "link": "yarn lerna run link",
     "clean": "yarn lerna run clean",
-    "bootstrap": "yarn lerna bootstrap"
+    "bootstrap": "yarn lerna bootstrap",
+    "cypress": "cypress open"
   }
 }
