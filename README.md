@@ -51,6 +51,7 @@ A micro frontend implementation for react js
 - Router Config
 - Some services and utils
 
+# Setup
 ### Install dependency :zap:
 ```bash
 yarn
@@ -76,7 +77,8 @@ yarn start:feature-01
 yarn build
 ```
 
-## Docker build :whale:
+# Docker
+## Build :whale:
 ```bash
 docker build -t <docker-image-name> <filepath>
 docker build -t react-mfe .
