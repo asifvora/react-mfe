@@ -39,7 +39,7 @@ A micro frontend implementation for react js
         - ...
     - shared-components
 
-# Used tools technology and libraries 🙌
+# 💻 Built With  
 - Lerna 🐉
 - React
 - Redux
@@ -51,7 +51,7 @@ A micro frontend implementation for react js
 - Router Config
 - Some services and utils
 
-# Setup
+# 🛠️ Installation Steps
 ### Install dependency :zap:
 ```bash
 yarn
@@ -77,21 +77,25 @@ yarn start:feature-01
 yarn build
 ```
 
-# Docker
-## Build :whale:
+# :whale: Docker
+## Build
 ```bash
 docker build -t <docker-image-name> <filepath>
 docker build -t react-mfe .
 docker image ls
 ```
 
-## Run a Container :whale:
+## Run a Container
 ```bash
 docker run -d -p <Host port>:<Docker port> <docker-image-name>
 docker run -d -p 9090:5000 react-mfe
 <image-id>
 ```
-## Check the running container :whale:
+## Check the running container
 ```bash
  docker ps -a
 ```
+
+
+# 🙏 Support
+This project needs a ⭐️  from you. Don't forget to leave a star ⭐️
