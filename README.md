@@ -26,7 +26,7 @@ A micro frontend implementation for react js
 # Read more about <a href="https://microfrontends.com/ ">Micro frontends</a>
 
 
-# App architecture 
+# 📖  App architecture 
 
 - packages
     - core-ui
