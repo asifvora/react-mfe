@@ -9,6 +9,7 @@ A micro frontend implementation for react js
 [![Storybook](https://img.shields.io/badge/storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
 [![lerna](https://img.shields.io/badge/Lerna-blueviolet?style=for-the-badge&logo=lerna&logoColor=white)](https://lerna.js.org/)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+[![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 
 
 
