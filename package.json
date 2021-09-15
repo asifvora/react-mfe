@@ -30,6 +30,8 @@
   "scripts": {
     "build": "yarn lerna run build --ignore=@mfe/shared",
     "prebuild": "yarn lerna run build --scope=@mfe/shared",
+    "start:core-ui": "yarn workspace @mfe/core-ui start",
+    "start:feature-01": "yarn workspace @mfe/feature-01 start",
     "link": "yarn lerna run link",
     "clean": "yarn lerna run clean",
     "bootstrap": "yarn lerna bootstrap",

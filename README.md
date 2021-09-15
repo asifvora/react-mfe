@@ -51,21 +51,45 @@ A micro frontend implementation for react js
 - Router Config
 - Some services and utils
 
+### Install dependency :package:
+```sh
+$ yarn
+```
 
-## Docker build
+### Linking dependency :wrench:
+```sh
+$ yarn bootstrap
+```
+
+### Start core-ui app :rocket:
+```sh
+$ yarn start:core-ui
+```
+
+### Start feature-01 app :rocket:
+```sh
+$ yarn start:feature-01
+```
+
+### Build all packages :rocket:
+```sh
+$ yarn build
+```
+
+## Docker build :whale:
 ```sh
 $ docker build -t <docker-image-name> <filepath>
 $ docker build -t react-mfe .
 $ docker image ls
 ```
 
-## Run a Container
+## Run a Container :whale:
 ```sh
 $ docker run -d -p <Host port>:<Docker port> <docker-image-name>
 $ docker run -d -p 9090:5000 react-mfe
 $ <image-id>
 ```
-## Check the running container
+## Check the running container :whale:
 ```sh
 $ docker ps -a
 ```
