@@ -1,4 +1,4 @@
-# React-mfe
+# React-mfe 
 A micro frontend implementation for react js
 
 
@@ -26,7 +26,7 @@ A micro frontend implementation for react js
 # Read more about <a href="https://microfrontends.com/ ">Micro frontends</a>
 
 
-# App architecture
+# App architecture 
 
 - packages
     - core-ui
@@ -39,7 +39,7 @@ A micro frontend implementation for react js
         - ...
     - shared-components
 
-# Used tools technology and libraries
+# Used tools technology and libraries 🙌
 - Lerna
 - React
 - Redux
@@ -52,44 +52,44 @@ A micro frontend implementation for react js
 - Some services and utils
 
 ### Install dependency :package:
-```sh
-$ yarn
+```bash
+yarn
 ```
 
 ### Linking dependency :wrench:
-```sh
-$ yarn bootstrap
+```bash
+yarn bootstrap
 ```
 
 ### Start core-ui app :rocket:
-```sh
-$ yarn start:core-ui
+```bash
+yarn start:core-ui
 ```
 
 ### Start feature-01 app :rocket:
-```sh
-$ yarn start:feature-01
+```bash
+yarn start:feature-01
 ```
 
 ### Build all packages :rocket:
-```sh
-$ yarn build
+```bash
+yarn build
 ```
 
 ## Docker build :whale:
-```sh
-$ docker build -t <docker-image-name> <filepath>
-$ docker build -t react-mfe .
-$ docker image ls
+```bash
+docker build -t <docker-image-name> <filepath>
+docker build -t react-mfe .
+docker image ls
 ```
 
 ## Run a Container :whale:
-```sh
-$ docker run -d -p <Host port>:<Docker port> <docker-image-name>
-$ docker run -d -p 9090:5000 react-mfe
-$ <image-id>
+```bash
+docker run -d -p <Host port>:<Docker port> <docker-image-name>
+docker run -d -p 9090:5000 react-mfe
+<image-id>
 ```
 ## Check the running container :whale:
-```sh
-$ docker ps -a
+```bash
+ docker ps -a
 ```
