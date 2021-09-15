@@ -40,7 +40,7 @@ A micro frontend implementation for react js
     - shared-components
 
 # Used tools technology and libraries 🙌
-- Lerna
+- Lerna 🐉
 - React
 - Redux
 - TypeScript
@@ -51,7 +51,7 @@ A micro frontend implementation for react js
 - Router Config
 - Some services and utils
 
-### Install dependency :package:
+### Install dependency :zap:
 ```bash
 yarn
 ```
@@ -71,7 +71,7 @@ yarn start:core-ui
 yarn start:feature-01
 ```
 
-### Build all packages :rocket:
+### Build all packages :package: 
 ```bash
 yarn build
 ```
