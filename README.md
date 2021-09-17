@@ -109,20 +109,20 @@ You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
 
 
 # :whale: Docker
-## Build
+### Build
 ```bash
 docker build -t <docker-image-name> <filepath>
 docker build -t react-mfe .
 docker image ls
 ```
 
-## Run a Container
+### Run a Container
 ```bash
 docker run -d -p <Host port>:<Docker port> <docker-image-name>
 docker run -d -p 9090:5000 react-mfe
 <image-id>
 ```
-## Check the running container
+### Check the running container
 ```bash
  docker ps -a
 ```
