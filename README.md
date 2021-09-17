@@ -105,6 +105,9 @@ yarn start:feature-01
 yarn build
 ```
 
+You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
+
+
 # :whale: Docker
 ## Build
 ```bash
