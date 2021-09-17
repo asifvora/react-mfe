@@ -3,7 +3,7 @@
 
 <p align="center">
 <a href="https://github.com/asifvora/react-mfe/blob/master/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/asifvora/react-mfe?style=flat-square" alt="react-mfe licence" />
+<img src="https://img.shields.io/badge/%20license-MIT%20-green" alt="react-mfe licence" />
 </a>
 <a href="https://github.com/asifvora/react-mfe/fork" target="blank">
 <img src="https://img.shields.io/github/forks/asifvora/react-mfe?style=flat-square" alt="react-mfe forks"/>
