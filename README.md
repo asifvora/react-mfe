@@ -1,6 +1,22 @@
-# React-mfe 
-A micro frontend implementation for react js
+<h1 align="center">React-mfe ✨️</h1>
+<p align="center">A micro frontend implementation for react js</p>
 
+<p align="center">
+<a href="https://github.com/asifvora/react-mfe/blob/master/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/asifvora/react-mfe?style=flat-square" alt="react-mfe licence" />
+</a>
+<a href="https://github.com/asifvora/react-mfe/fork" target="blank">
+<img src="https://img.shields.io/github/forks/asifvora/react-mfe?style=flat-square" alt="react-mfe forks"/>
+</a>
+<a href="https://github.com/asifvora/react-mfe/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/asifvora/react-mfe?style=flat-square" alt="react-mfe stars"/>
+</a>
+<a href="https://github.com/asifvora/react-mfe/issues" target="blank">
+<img src="https://img.shields.io/github/issues/asifvora/react-mfe?style=flat-square" alt="react-mfe issues"/>
+</a>
+<a href="https://github.com/asifvora/react-mfe/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/asifvora/react-mfe?style=flat-square" alt="react-mfe pull-requests"/>
+</p>
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
@@ -40,18 +56,30 @@ A micro frontend implementation for react js
     - shared-components
 
 # 💻 Built With  
-- Lerna 🐉
-- React
-- Redux
-- TypeScript
-- Rollup
-- StyledComponent
-- SCSS
-- Storybook
-- Router Config
+- [Lerna 🐉](https://lerna.js.org/)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Rollup](https://rollupjs.org/)
+- [Styled Component](https://styled-components.com/)
+- [SCSS](https://sass-lang.com/)
+- [Storybook](https://storybook.js.org/)
+- [Router](https://reactrouter.com/)
 - Some services and utils
 
 # 🛠️ Installation Steps
+
+### Clone the repository ⎘
+```bash
+git clone https://github.com/asifvora/react-mfe.git
+
+```
+
+### Change the working directory 📂
+```bash
+cd react-mfe
+```
+
 ### Install dependency :zap:
 ```bash
 yarn
@@ -96,6 +124,22 @@ docker run -d -p 9090:5000 react-mfe
  docker ps -a
 ```
 
+# 🛡️ License
+
+This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
+
+# 👨‍💻 Author
+### 👤 Asif Vora
+- Github: [@asifvora](https://github.com/asifvora)
+- LinkedIn: [@asif-vora](https://www.linkedin.com/in/asif-vora/)
+- Twitter: [@007_dark_shadow](https://twitter.com/007_dark_shadow)
+- Instagram: [@007_dark_shadow](https://www.instagram.com/007_dark_shadow/)
+
+# 🍰 Contributing
+
+- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/asifvora/react-mfe/compare).
+
+- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details.
 
 # 🙏 Support
 This project needs a ⭐️  from you. Don't forget to leave a star ⭐️
