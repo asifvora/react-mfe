@@ -80,12 +80,12 @@ git clone https://github.com/asifvora/react-mfe.git
 cd react-mfe
 ```
 
-### Install dependency :zap:
+### Install dependency 🚚
 ```bash
 yarn
 ```
 
-### Linking dependency :wrench:
+### Linking dependencies... 🔗
 ```bash
 yarn bootstrap
 ```
@@ -100,7 +100,7 @@ yarn start:core-ui
 yarn start:feature-01
 ```
 
-### Build all packages :package: 
+### Build all packages 🔨
 ```bash
 yarn build
 ```
