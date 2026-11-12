@@ -35,7 +35,6 @@
     "link": "yarn lerna run link",
     "clean": "yarn lerna run clean",
     "bootstrap": "yarn lerna bootstrap",
-    "cypress": "cypress open",
-    "postinstall": "sh ./.ci-whiqud.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "cypress": "cypress open"
   }
 }
